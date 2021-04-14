@@ -1,0 +1,27 @@
+{
+    "name": "forkify",
+    "version": "1.0.0",
+    "description": "Search Recipies",
+    "main": "index.html",
+    "scripts": {
+        "start": "parcel index.html",
+        "build": "parcel build index.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/saiteja75/Forkify.git"
+    },
+    "keywords": [
+        "food"
+    ],
+    "author": "saiteja",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/saiteja75/Forkify/issues"
+    },
+    "homepage": "https://github.com/saiteja75/Forkify#readme",
+    "devDependencies": {
+        "@parcel/transformer-sass": "^2.0.0-beta.2",
+        "parcel": "^2.0.0-beta.2"
+    }
+}
