@@ -17,13 +17,15 @@ const timeout = function(s) {
 
 const getRecipe = async function() {
         try {
+            const id = window.location.hash.slice(1);
+            if (!id) return;
             recipeContainer.innerHTML = '';
             recipeContainer.insertAdjacentHTML('afterbegin', `<div class="spinner">
             <svg>
               <use href="${icons}#icon-loader"></use>
             </svg>
           </div>`);
-            const res = await fetch('https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886');
+            const res = await fetch(`https://forkify-api.herokuapp.com/api/v2/recipes/${id}`);
             console.log(res);
             if (!res.ok) throw new Error(`Invalid Request${res.status}`);
             const data = await res.json();
@@ -133,3 +135,5 @@ const getRecipe = async function() {
 }
 
 getRecipe();
+
+['hashchange','load'].forEach(ev => window.addEventListener(ev, getRecipe));
