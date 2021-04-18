@@ -47,7 +47,7 @@ const controlPagination = function(gotoPage) {
     paginationView.render(model.state.search)
 }
 
-const controlServing = function(serving) {
+const controlServingRecipe = function(serving) {
     if(serving<=0) return;
 
     model.updateServings(serving);
@@ -88,7 +88,7 @@ const controlAddRecipe =async function(newRecipe) {
 const init = function() {
     bookmarkView.addRenderHandler(loadBookMarks);
     recipeView.addRenderHandler(setRecipe);
-    recipeView.addHandleServing(controlServing);
+    recipeView.addHandleServing(controlServingRecipe);
     recipeView.addBookmarkHandler(controlAddBookmark);
     searchView.addSearchHandler(setSearchedRecipes);
     paginationView.addHandlerClick(controlPagination);
