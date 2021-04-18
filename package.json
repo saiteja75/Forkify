@@ -21,6 +21,7 @@
     },
     "homepage": "https://github.com/saiteja75/Forkify#readme",
     "devDependencies": {
+        "@parcel/transformer-sass": "^2.0.0-beta.2",
         "babel-eslint": "^10.1.0",
         "parcel": "^2.0.0-beta.1",
         "sass": "^1.26.10"
