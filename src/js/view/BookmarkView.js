@@ -1,8 +1,8 @@
 import View from "./View";
 import icons from 'url:../../img/icons.svg';
 
-class ResultView extends View {
-    _parentElement = document.querySelector('.results');
+class BookmarkView extends View {
+    _parentElement = document.querySelector('.bookmarks__list');
     _errorMsg ='No Match Found';
 
     _generateMarkup() {
@@ -30,4 +30,4 @@ class ResultView extends View {
     }
 }
 
-export default new ResultView();
+export default new BookmarkView();
